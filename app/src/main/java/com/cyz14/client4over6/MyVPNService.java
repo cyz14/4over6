@@ -3,6 +3,7 @@ package com.cyz14.client4over6;
 import android.content.Intent;
 import android.net.VpnService;
 import android.os.IBinder;
+import android.os.ParcelFileDescriptor;
 import android.util.Log;
 
 /**
@@ -18,6 +19,18 @@ public class MyVPNService extends VpnService {
     public void onCreate() {
         super.onCreate();
         Log.d("MyVPNService", "onCreate executed");
+
+        Builder builder = new Builder();
+//        builder.setMtu();
+//        builder.addAddress();
+//        builder.addRoute("0.0.0.0/0"); // ?
+//        builder.addDnsServer();
+//        builder.addSearchDomain();
+        builder.setSession("PacketCapture");
+//        builder.setConfigureIntent();
+
+        ParcelFileDescriptor m_interface = builder.establish();
+
     }
 
     @Override
