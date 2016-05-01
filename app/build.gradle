@@ -4,12 +4,21 @@ android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
 
+    sourceSets {
+        main{
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
     defaultConfig {
         applicationId "com.cyz14.client4over6"
         minSdkVersion 19
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
+        ndk {
+            moduleName "hellojni"
+        }
     }
     buildTypes {
         release {

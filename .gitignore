@@ -4,4 +4,6 @@
 /.idea/libraries
 .DS_Store
 /build
+/app/src/main/jniLibs
+/app/build
 /captures
