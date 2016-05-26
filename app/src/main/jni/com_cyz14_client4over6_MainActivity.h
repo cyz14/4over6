@@ -7,12 +7,14 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+#undef com_cyz14_client4over6_MainActivity_MSG_UPDATEUI
+#define com_cyz14_client4over6_MainActivity_MSG_UPDATEUI 0L
 /*
  * Class:     com_cyz14_client4over6_MainActivity
- * Method:    StringFromJNI
+ * Method:    RequestInfo
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_com_cyz14_client4over6_MainActivity_StringFromJNI
+JNIEXPORT jstring JNICALL Java_com_cyz14_client4over6_MainActivity_RequestInfo
   (JNIEnv *, jobject);
 
 #ifdef __cplusplus
